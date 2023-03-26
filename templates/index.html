@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Customer Churn Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="jumbotron">
+        <center>
+            <h1>Bank Customer Churn Prediction</h1>
+        </center>
+    </div>
+
+    <div class="container">
+        <h3>Provide input here</h3>
+    
+        <style>
+            form input {
+                margin-bottom: 10px;
+            }
+        </style>
+        
+        <form action="/" method="POST">
+            <label for="CreditScore">CreditScore:</label>
+            <input type="number" name="CreditScore" id="CreditScore"><br>
+        
+            <label for="Geography">Geography:</label>
+            <input type="number" name="Geography" id="Geography"><br>
+        
+            <label for="Gender">Gender:</label>
+            <input type="number" name="Gender" id="Gender"><br>
+        
+            <label for="Age">Age:</label>
+            <input type="number" name="Age" id="Age"><br>
+        
+            <label for="Tenure">Tenure:</label>
+            <input type="number" name="Tenure" id="Tenure"><br>
+        
+            <label for="Balance">Balance:</label>
+            <input type="number" name="Balance" id="Balance"><br>
+        
+            <label for="NumOfProducts">NumOfProducts:</label>
+            <input type="number" name="NumOfProducts" id="NumOfProducts"><br>
+        
+            <label for="HasCrCard">HasCrCard:</label>
+            <input type="number" name="HasCrCard" id="HasCrCard"><br>
+        
+            <label for="IsActiveMember">IsActiveMember:</label>
+            <input type="number" name="IsActiveMember" id="IsActiveMember"><br>
+        
+            <label for="EstimatedSalary">EstimatedSalary:</label>
+            <input type="number" name="EstimatedSalary" id="EstimatedSalary"><br>
+        
+            <input type="submit" value="Predict">
+        </form>
+        
+    
+        {% if pred %}
+        <div class="alert alert-success" role="alert">
+            <h4>Your prediction is {{ pred }}!</h4>
+        </div>
+        {% endif %}
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
