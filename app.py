@@ -4,7 +4,7 @@ import joblib
 import json
 
 # Load your trained model here
-model = joblib.load('D:\Bank_Churn_Prediction\model\model.pkl')
+model = joblib.load('model.pkl')
 
 feat_cols = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts',
              'HasCrCard', 'IsActiveMember', 'EstimatedSalary']
