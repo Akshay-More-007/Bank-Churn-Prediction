@@ -6,11 +6,8 @@ import joblib
 import json
 
 # Load your trained model here
-<<<<<<< HEAD
 model = joblib.load('/app/model.pkl')
-=======
 model = joblib.load('model.pkl')
->>>>>>> fa4fc3789f3921fbdfc2344eb9a1dd64c4fb8cdc
 
 feat_cols = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts',
              'HasCrCard', 'IsActiveMember', 'EstimatedSalary']
