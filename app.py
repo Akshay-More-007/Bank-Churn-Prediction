@@ -1,10 +1,12 @@
+import cmath
+import click
 from flask import Flask, render_template, request
 import numpy as np
 import joblib
 import json
 
 # Load your trained model here
-model = joblib.load('D:\Bank_Churn_Prediction\model\model.pkl')
+model = joblib.load('/app/model.pkl')
 
 feat_cols = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts',
              'HasCrCard', 'IsActiveMember', 'EstimatedSalary']
@@ -50,4 +52,4 @@ def predict_churn():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0', port=5000)

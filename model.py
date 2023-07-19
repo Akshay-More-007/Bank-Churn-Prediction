@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 curr_path = os.path.dirname(os.path.realpath(__file__))
-model_path = os.path.join(curr_path, + 'model\model.pkl')
+model_path = os.path.join(curr_path, + '/app/model.pkl')
 model = pickle.load(open(model_path, 'rb'))
 
 def predict_churn(attributes: np.ndarray):
