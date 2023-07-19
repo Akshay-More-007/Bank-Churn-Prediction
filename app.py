@@ -6,7 +6,11 @@ import joblib
 import json
 
 # Load your trained model here
+<<<<<<< HEAD
 model = joblib.load('/app/model.pkl')
+=======
+model = joblib.load('model.pkl')
+>>>>>>> fa4fc3789f3921fbdfc2344eb9a1dd64c4fb8cdc
 
 feat_cols = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts',
              'HasCrCard', 'IsActiveMember', 'EstimatedSalary']
@@ -52,4 +56,8 @@ def predict_churn():
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(debug=True,host='0.0.0.0', port=5000)
+=======
+    app.run(debug=True)
+>>>>>>> fa4fc3789f3921fbdfc2344eb9a1dd64c4fb8cdc
